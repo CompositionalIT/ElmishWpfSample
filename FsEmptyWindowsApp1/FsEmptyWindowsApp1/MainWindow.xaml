@@ -1,0 +1,15 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
+    Title="Elmish WPF!" Height="200" Width="400">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <TextBox Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Description, Mode=OneWay}"/>
+            <TextBlock Text="{Binding Time, Mode=OneWay, StringFormat=yyyy-MM-dd HH:mm:ss:fff}"/>
+            <Button Command="{Binding HitMe, Mode=OneWay}">Hit me!</Button>
+        </StackPanel>
+        <ListBox ItemsSource="{Binding Trace, Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True"/>
+    </DockPanel>
+</Window>

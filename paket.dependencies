@@ -1,0 +1,7 @@
+source https://www.nuget.org/api/v2/
+redirects on
+framework net47
+nuget Elmish.Wpf
+nuget Expression.Blend.Sdk
+nuget FsXaml.Wpf 3.1.2
+nuget FSharp.Core
